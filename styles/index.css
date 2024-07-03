@@ -1,7 +1,4 @@
 
-
-
-
 /*----------------INDEX----------------*/
 
 *{
@@ -220,16 +217,252 @@ padding: 10px 40px;
     cursor: pointer;
 }
 
-
-
-
-
-
-
   .header .title{
     display: none;
   }
  
 }
 
+/*----------------CONOCER----------------*/
 
+.headerConocer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(196, 1, 214, 0.74);
+    padding: 10px 40px;
+    }
+    
+    .menuConocer {
+      position: fixed;/*  so that the menu remained fixed and visible on the screen (probably changed to sticky)*/
+      top: 0;
+      right: 0;
+    
+      height: 100vh;
+      width: 26vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .toggle-input {
+      position: absolute !important;
+      clip: rect(1px, 1px, 1px, 1px);
+      padding: 0 !important;
+      border: 0 !important;
+      height: 1px !important;
+      width: 1px !important;
+      overflow: hidden;}
+    
+    .menuConocer .list{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    .menuConocer .list .item{
+      width: 100%;
+      padding: 10px;
+      border: solid 1px rgba(0, 0, 0, 0.26);
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .menuConocer .list li:hover{
+      transition: all 0.3s ease;
+      scale: 1.1;    
+    }
+    
+    /* Estilos para pantallas pequeñas */
+    @media (max-width: 768px) {
+        .container {
+          width: 90%; /* Reducir el ancho del contenedor para dispositivos pequeños */
+        }
+        .card {
+          width: 100%; /* Hacer que las tarjetas ocupen todo el ancho en dispositivos pequeños */
+          margin-bottom: 20px; /* Añadir un margen inferior entre las tarjetas */
+        }
+      }
+      
+      /* Estilos para pantallas medianas y grandes */
+      @media (min-width: 769px) {
+        .container {
+          width: 80%; /* Reducir un poco el ancho del contenedor en pantallas más grandes */
+          max-width: 1200px; /* Establecer un ancho máximo para el contenedor */
+          margin: 0 auto; /* Centrar el contenedor en pantallas medianas y grandes */
+        }
+        .card {
+          width: calc(33.33% - 40px); /* Hacer que las tarjetas ocupen un tercio del ancho del contenedor y añadir márgenes entre ellas */
+          margin: 0 20px 20px 0; /* Añadir márgenes entre las tarjetas */
+        }
+        .row {
+          margin-bottom: 20px; /* Añadir un margen inferior entre filas de tarjetas */
+        }
+      }
+      .container{
+        display: flex;
+        padding: 40px;
+        margin-right: 20%;
+        flex-direction: column;
+        width: 70%;
+        background-color: rgba(128, 128, 128, 0.404);
+        border-radius: 10px;
+    
+    }
+    
+      .card {
+        border-radius: 6px; /* Borde redondeado para las tarjetas */
+        width: 100%;
+        overflow: hidden; /* Evitar que el contenido se desborde fuera de las tarjetas */
+        background: #fff; /* Color de fondo de las tarjetas */
+        box-shadow: 0px 1px 10px rgba(0,0,0,0.2); /* Sombra para las tarjetas */
+        overflow: hidden;
+        cursor: default;
+      }
+      .card .agregar {
+        margin-left: 30%;
+        padding: 10px;
+    
+      }
+      .card .nombre h2{
+        margin-left: 13%;
+        font-weight: 400;
+    
+      }
+      .img-perfiles img {
+        max-width: 100%; /* Imágenes se ajustan al ancho de su contenedor */
+        height: auto; /* Mantener la proporción de aspecto de las imágenes */
+        width: auto;
+    }
+    .row{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;}
+    
+      .contactConocer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+     
+        height: 100px;
+        background-color: rgba(196, 1, 214, 0.74);}
+
+    /*--------------LOGIN--------------*/
+
+
+   .containerLog{
+    display: grid;
+    background-color: rgba(137, 43, 226, 0.616);
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+   }
+
+   .imageLog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+   .imageLog img{
+    position: absolute;
+    width: 44%;
+    height: 100%;
+    
+   }
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 38%;
+    margin-top: 40%;
+    background-color: #ce06ce;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(124, 123, 123, 0.993);
+    width: 30%;
+    height: 30%;
+    text-align: center;
+
+}
+
+.loginForm h4{
+    margin-bottom: 5px;
+
+}
+
+.loginForm label{
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.loginForm input{
+    display: block;
+    width: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.loginForm button{
+    padding: 5px;
+    border-radius: 5px ;
+    font-size: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: black;
+
+}
+
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+  .containerLog {
+      grid-template-columns: 1fr;
+  }
+
+  .imageLog img {
+      position: relative;
+      width: 70%;
+      height: auto;
+  }
+
+  .login {
+      margin-left: 0;
+      margin-top: 20%;
+      width: 50%;
+      height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .login {
+      margin-top: 10%;
+      width: 80%;
+      padding: 15px;
+  }
+
+  .imageLog img {
+      width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .login {
+      margin-top: 5%;
+      width: 90%;
+      padding: 20px;
+  }
+
+  .imageLog img {
+      width: 90%;
+  }
+}
+
+.contactConocerLogin{
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(196, 1, 214, 0.74);}
